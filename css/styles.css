@@ -1,0 +1,39 @@
+@font-face {
+    font-family: MusticaPro-SemiBold;
+    src: url("/fonts/MusticaPro-SemiBold.otf");
+}
+
+body{
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    font-family: MusticaPro-SemiBold, sans-serif;
+}
+
+.centered {
+    padding: 100px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+.navMenu a {
+    color: #f6f4e6;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1em;
+}
+
+.navMenu a:hover {
+    color: #fddb3a;
+}
+
+.introText{
+    color: #f6f4e6;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+}
