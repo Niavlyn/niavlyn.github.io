@@ -3,21 +3,390 @@
 <head>
     <meta charset="UTF-8">
 
-    <!--CSS Styles -->
+    <!-- CSS Styles -->
     <link rel="stylesheet" href="css/styles.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
 
     <title>Sylvain's Portfolio</title>
 </head>
 <body>
-<p class="introText">Hello, I'm Sylvain</p>
-<p class="introText">Welcome to my portfolio !</p>
-<div class="centered">
-    <nav class="navMenu">
-        <a href="pages/about_me.html">About me</a>
-        <a href="pages/skills.html">Skills</a>
-        <a href="pages/projects.html">Projects</a>
-        <a href="pages/contact.html">Contact</a>
-    </nav>
+<!-- Fond constant -->
+<div class="background">
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </div>
 </div>
+
+<div class="intro_part">
+
+    <p class="introText">Welcome to my portfolio !</p>
+    <h1 class="cat_title">About me</h1>
+    <div class="left_block">
+	    <p>Hi, I'm Sylvain ! I just graduated with a master's degree in computer science in France, and I specialize in XR development. I'm very curious about new immersive technologies in augmented, mixed and virtual reality.</p>
+        <p>My goal is to create innovative and interactive experiences that will make people's lives easier and more enjoyable. I am passionate about creating new things and I am always looking for new challenges to take on.</p>
+    </div>
+
+
+    <h1 class="cat_title">XR related experiences and projects</h1>
+    <div class="title_with_image">
+    
+        <a href="https://www.flaticon.com/fr/icones-gratuites/metaverse" title="ar icon">
+            <img src="images/realite-augmentee.png" class="left_image"/>
+         </a>
+        <h2 class="cat_title">ETSI Augmented Reality Framework</h2>
+
+        <div class="controls">
+            <!-- Image to toggle section visibility -->
+            <label class="hover">
+              <figure id="toggle_figure_1"><img src="images/arrow_down.png" alt="Toggle Icon" id="toggle-image_1"></figure>
+            </label>
+        </div>
+
+    </div>
+
+
+
+    <div id="hidden-section_1" class="hidden-section">
+    
+        <div class="company" style="margin-left:40px">
+            <a title="orange icon">
+                <img src="images/Orange_logo.svg" class="right_image rounded_image" />
+            </a>   
+        </div>
+
+        <div class="left_block">
+	        <p>During the last internship of my Master's degree, I worked at Orange Innovation, on a Augmented Reality (AR) project.
+            I worked on an implementation of a new standard of the European Telecommunications Standards Institute (ETSI), of which Orange is a partner. 
+            The objectives of the new standard are summarized by ETSI as follows : </p>
+
+            <p> <i>"We are defining a framework for the interoperability of Augmented Reality (AR) components, systems and services that specifies relevant components and interfaces required for an AR solution. Augmented Reality is the ability to mix in real-time spatially-registered digital content with the real world surrounding the user.<br>
+
+            The development of a modular architecture will allow components from different providers to interoperate through defined interfaces. Transparent and reliable interworking between different AR components is key to the successful roll-out and wide adoption of AR applications and services."</i></p>
+
+            <p>Source here  : <a href="https://www.etsi.org/committee/1420-arf">ETSI ARF</a></p>
+        </div>
+
+        <div class="container">
+            <div class="right_block">
+                <p>In this project, I worked on the implementation of a component named World Analysis, which task was to relocalize content in the AR scene at the correct places. 
+                I made this implementation using Unity and the ARFoundation framework, using the specifications of the APIs created by my colleagues.<br> At the end of my internship, I created a use case demo for Android and iOS devices that illustrates how the ARF framework works.<br>
+                The project is meant to be open source, you can find the GitLab repository below (my part is in the World Analysis Wrapper / Validation folders). </p>
+        
+                <div class="hover">
+                    <a href="https://labs.etsi.org/rep/arf" title="ARF Gitlab">
+                        <figure id="gitlab_figure"><img src="images/gitlab_color.png" class="gitlab"></figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="left_block gifs_div" >
+	        <p>Using a combination of real life "trackable" objects and fixed space positions known as anchors, we are able to deliver an extremely similar experience to the user regardless of the device used. <br>
+            Here are some excerpts from the validation application tests. On the left, the Android version, and on the right, the iOS one.</p>
+             </p>
+            <div class="etsi_gifs">
+                <img src="images/ValidationAppAndroid.gif" alt="android ETSI gif"/>
+                <img src="images/ValidationAppiOS.gif" alt="iOS ETSI gif"/>
+    
+            </div>
+        </div>
+    </div>
+
+
+    <div class="title_with_image">
+         <a href="https://www.flaticon.com/fr/icones-gratuites/metaverse" title="ar icon">
+            <img src="images/lunettes-vr.png" class="left_image"/>
+         </a>
+        <h2 class="cat_title">Supercopter</h2>
+
+        <div class="controls">
+            <!-- Image to toggle section visibility -->
+            <label class="hover">
+              <figure id="toggle_figure_2"><img src="images/arrow_down.png" alt="Toggle Icon" id="toggle-image_2"></figure>
+            </label>
+        </div>
+    </div>
+
+    <div id="hidden-section_2" class="hidden-section">
+        <div class="left_block">
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac odio egestas, volutpat orci at, porttitor ipsum. Mauris feugiat luctus lectus vel congue. Suspendisse et sagittis nunc, at faucibus nisl. Cras facilisis felis mattis risus fermentum hendrerit. Vestibulum congue nisi ac felis tristique, eu pulvinar nulla sodales. Aliquam eget nisi nec libero gravida dictum. Nulla ullamcorper, nisi non auctor sollicitudin, quam justo rutrum neque, non scelerisque mauris lorem id mauris. Aliquam facilisis id dolor at maximus. Aliquam a consequat magna, sit amet mattis arcu. Nam sagittis arcu nisl, ut lacinia sem feugiat sit amet. Phasellus nunc nisi, lobortis ac sagittis at, posuere nec turpis. Aenean quis massa vitae lacus dapibus pharetra quis sed lectus. Aenean dolor neque, commodo eu est a, dictum efficitur nibh. Nulla consequat diam ante, vitae facilisis elit interdum eu.
+
+            Nunc ultrices ipsum ut imperdiet luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam congue vitae felis dignissim pretium. Etiam ante sem, vulputate non elit vel, tempus mollis erat. In lacinia nisi quis leo lacinia convallis. In hac habitasse platea dictumst. Aliquam laoreet semper varius. Ut consectetur mattis venenatis. In lacinia sodales eleifend. Ut pellentesque augue dui, posuere consequat sapien aliquet nec. Nam tincidunt nibh quis magna ornare rutrum. Aliquam tempus quam non tellus pretium venenatis. Quisque blandit, ipsum at pellentesque faucibus, nisl sapien condimentum dolor, nec porttitor lacus sem euismod leo. Sed eget elit tristique, sagittis erat vel, bibendum odio.
+            </p>
+        </div>
+    </div>
+
+    <div class="title_with_image">
+         <a href="https://www.flaticon.com/fr/icones-gratuites/metaverse" title="ar icon">
+            <img src="images/lunettes-vr.png" class="left_image"/>
+         </a>
+        <h2 class="cat_title">AVATAR</h2>
+
+        <div class="controls">
+            <!-- Image to toggle section visibility -->
+            <label class="hover">
+              <figure id="toggle_figure_3"><img src="images/arrow_down.png" alt="Toggle Icon" id="toggle-image_3"></figure>
+            </label>
+        </div>
+    </div>
+    <div id="hidden-section_3" class="hidden-section">
+        <div class="left_block">
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac odio egestas, volutpat orci at, porttitor ipsum. Mauris feugiat luctus lectus vel congue. Suspendisse et sagittis nunc, at faucibus nisl. Cras facilisis felis mattis risus fermentum hendrerit. Vestibulum congue nisi ac felis tristique, eu pulvinar nulla sodales. Aliquam eget nisi nec libero gravida dictum. Nulla ullamcorper, nisi non auctor sollicitudin, quam justo rutrum neque, non scelerisque mauris lorem id mauris. Aliquam facilisis id dolor at maximus. Aliquam a consequat magna, sit amet mattis arcu. Nam sagittis arcu nisl, ut lacinia sem feugiat sit amet. Phasellus nunc nisi, lobortis ac sagittis at, posuere nec turpis. Aenean quis massa vitae lacus dapibus pharetra quis sed lectus. Aenean dolor neque, commodo eu est a, dictum efficitur nibh. Nulla consequat diam ante, vitae facilisis elit interdum eu.
+
+            Nunc ultrices ipsum ut imperdiet luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam congue vitae felis dignissim pretium. Etiam ante sem, vulputate non elit vel, tempus mollis erat. In lacinia nisi quis leo lacinia convallis. In hac habitasse platea dictumst. Aliquam laoreet semper varius. Ut consectetur mattis venenatis. In lacinia sodales eleifend. Ut pellentesque augue dui, posuere consequat sapien aliquet nec. Nam tincidunt nibh quis magna ornare rutrum. Aliquam tempus quam non tellus pretium venenatis. Quisque blandit, ipsum at pellentesque faucibus, nisl sapien condimentum dolor, nec porttitor lacus sem euismod leo. Sed eget elit tristique, sagittis erat vel, bibendum odio.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<div class="white_background">
+    <h1 class="cat_title">Skills</h1>
+    <h2 class="cat_skills">Developpement skills</h2>
+    <div class="skills-grid">
+        <div class="skill-item">
+            <div class="skill_item_img">    
+                <img src="images/unity.png" alt="Unity">
+            </div>
+            <p>Unity</p>
+        </div>
+        <div class="skill-item">
+            <div class="skill_item_img"> 
+                <img src="images/android.svg" alt="Android">
+            </div>
+            <p>Android</p>
+        </div>
+        <div class="skill-item">
+            <div class="skill_item_img">     
+                <img src="images/C_sharp.svg" alt="C#">
+            </div>
+            <p>C#</p>
+        </div>
+        <div class="skill-item">
+            <div class="skill_item_img">
+                <img src="images/JavaScript.svg" alt="JavaScript">
+            </div>
+            <p>JavaScript</p>
+        </div>
+        <div class="skill-item">
+            <div class="skill_item_img">
+                <img src="images/Python.svg" alt="Python">
+            </div>
+            <p>Python</p>
+        </div>
+        <div class="skill-item">
+            <div class="skill_item_img">
+                <img src="images/java.svg" alt="Java">
+            </div>
+            <p>Java</p>
+        </div>
+        <div class="skill-item">
+            <div class="skill_item_img">
+                <img src="images/C++.svg" alt="C++">
+            </div>
+            <p>C++</p>
+        </div>
+    </div>
+
+    <h2 class="cat_skills">XR frameworks</h2>
+    <div class="skills-grid">
+        <div class="skill-item">
+            <div class="skill_item_img" id="arfoundation">
+                <p>AR Foundation</p>
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill_item_img">
+                <img src="images/arcore.svg" alt="Arcore">
+            </div>
+            <p>ARCore</p>
+        </div>
+        <div class="skill-item">
+            <div class="skill_item_img">
+                <img src="images/arkit.png" alt="Arkit">
+            </div>
+            <p>ARKit</p>
+        </div>
+    </div>
+
+    <h2 class="cat_skills">Motion capture and other tools</h2>
+    <div class="skills-grid">
+        <div class="skill-item">
+            <div class="skill_item_img">
+                <img src="images/qtm.png" alt="Qualisys QTM">
+            </div>
+            <p>Qualisys QTM</p>
+        </div>
+        <div class="skill-item">
+            <div class="skill_item_img">
+                <img src="images/motionbuilder.png" alt="Motion Builder">
+            </div>
+            <p>Motion Builder</p>
+        </div>
+        <div class="skill-item">
+            <div class="skill_item_img">
+                <img src="images/Git.png" alt="Git">
+            </div>
+            <p>Git</p>
+        </div>
+        <div class="skill-item">
+            <div class="skill_item_img">
+                <img src="images/Unix.svg" alt="Unix">
+            </div>
+            <p>Unix</p>
+        </div>
+    </div>
+</div>
+
+<div class="education">
+    <h1 class="cat_title">Professional experiences and education</h1>
+    <h2>Professional experiences</h2>
+
+    <div class="centered-container">
+        <div class="top-div">
+            <a title="orange icon">
+                <img src="images/Orange_logo.svg" class="right_image rounded_image" />
+            </a> 
+            <p>
+            Augmented reality developer internship at Orange Innovation<br>
+            February 2024 - August 2024<br>
+            Skills : Unity, C#, ARFoundation, ARCore, ARKit
+            </p>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="bottom-div">
+            <a title="irisa icon">
+                <img src="images/irisa.png" class="rounded_image" style="max-height : 48px"/>
+            </a> 
+            <p>Unity developer internship at IRISA and LARIS research laboratories (remote)<br>
+            July 2023 - August 2023<br>
+            Skills : Unity, C#, Qualisys QTM, Motion Builder
+            </p>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="bottom-div">
+            <a title="mydemenageur icon">
+                <img src="images/mydemenageur.png" class="right_image rounded_image" />
+            </a> 
+            <p>Web and mobile developer internship at  MyDemenageur - Solid'R (remote)<br>
+            April 2021 - June 2021<br>
+            Skills : Flutter, JavaScript, PHP, HTML, CSS
+            </p>
+        </div>
+    </div>
+
+    <h2>Education</h2>
+
+    <div class="centered-container">
+        <div class="top-div">
+            <a title="SSI_UBS">
+                <img src="images/SSI_UBS.png" class="right_image rounded_image" />
+            </a> 
+            <p>
+            Master of Computer Science, specializing in Interactive Applications and Digital Data<br>
+            University of South Brittany<br>
+            2022 - 2024
+            </p>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="bottom-div">
+            <a title="SSI_UBS">
+                <img src="images/SSI_UBS.png" class="right_image rounded_image" />
+            </a> 
+            <p>Bachelor of Computer Science - University of South Brittany<br>
+            2021 - 2022
+            </p>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="bottom-div">
+            <a title="iut vannes">
+                <img src="images/IUT_VANNES.jpg" class="right_image rounded_image" />
+            </a> 
+            <p>Associate Degree in Computer Science - University Institute of Technology of Vannes<br>
+            2019 - 2021
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="white_background">
+    <h1 class="cat_title">Contact</h1>
+    <div class="contact">
+        <a href="https://www.linkedin.com/in/sylvain-buche/" title="linkedin">
+            <img src="images/linkedin.png" alt="linkedin link">
+        </a>
+        <p> buche.sylvain[at]gmail.com<br><br>
+        
+        📍Brittany, France</p>
+    </div>
+</div>
+
+
+<!-- Conteneur pour charger le contenu dynamiquement -->
+<div id="content"></div>
+
+<!-- Script JavaScript -->
+
+<script>
+    // JavaScript to toggle visibility
+    document.getElementById('toggle-image_1').addEventListener('click', function() {
+      var hiddenSection = document.getElementById('hidden-section_1');
+      hiddenSection.classList.toggle('visible'); // Toggle 'visible' class
+    });
+  </script>
+
+  <script>
+    // JavaScript to toggle visibility
+    document.getElementById('toggle-image_2').addEventListener('click', function() {
+      var hiddenSection = document.getElementById('hidden-section_2');
+      hiddenSection.classList.toggle('visible'); // Toggle 'visible' class
+    });
+  </script>
+
+  <script>
+    // JavaScript to toggle visibility
+    document.getElementById('toggle-image_3').addEventListener('click', function() {
+      var hiddenSection = document.getElementById('hidden-section_3');
+      hiddenSection.classList.toggle('visible'); // Toggle 'visible' class
+    });
+  </script>
+
+
+<script>
+    // Fonction pour charger le contenu de la page
+    function loadPage(page) {
+        fetch(`pages/${page}.html`)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('content').innerHTML = data;
+            })
+            .catch(error => console.error(error));
+    }
+
+    // Écouteurs d'événements pour les liens de navigation
+    document.querySelectorAll('.navMenu a').forEach(link => {
+        link.addEventListener('click', event => {
+            event.preventDefault();
+            const page = link.getAttribute('href').substring(1); // Supprime le # du href
+            loadPage(page);
+        });
+    });
+
+</script>
 </body>
 </html>
