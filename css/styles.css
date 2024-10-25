@@ -1,3 +1,16 @@
+/*color ideas
+
+#E94F37
+#393e41
+#f6f7eb
+
+#3A606E
+#607B7D
+#828E82
+
+*/
+
+
 /* Regular Weight */
 @font-face {
     font-family: MusticaPro;
@@ -67,57 +80,47 @@ h1 h2{
     display : flex;
     justify-content: space-between;
     align-items: center;
+    max-width : 40%;
+    border-radius: 15px;
 }
 
 .etsi_gifs img{
-	width: : 10%;
-	height : auto;
+	width: 45%;
 }
 
+.horizontal-line {
+    width: 70%; /* Largeur de la ligne verticale */
+    height: 5px; /* Hauteur de la ligne verticale */
+    background-color: white; /* Couleur de la ligne */
+    margin: 10px 0; /* Espace entre la ligne et les divs */
+    box-sizing: border-box;
+    max-width: 70%;
+    border-radius : 15px;
+}
 
-
-.left_block{
+.block{
     color: #f6f4e6;
-    width: 60%;
-    padding: 20px; 
-    margin: 20px;  
-    /* From https://css.glass */
-    /*background: rgba(255, 255, 255, 0.16);*/
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    overflow: hidden;
-}
-
-.gifs_div{
-    padding : 0px;
-}
-
-.gifs_div p {
-    margin: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align : left;
 }
 
 
 
 
 
-.container {
-    text-align : right;
-}
+
 
 .right_block {
     color: #f6f4e6;
     width: 60%;
     padding: 20px;
-    /*background: rgba(255, 255, 255, 0.16);*/
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 3px solid rgba(255, 255, 255, 0.3);
-    display : inline-block;
+   /* display : inline-block;*/
     text-align : left;
 }
 
@@ -148,8 +151,7 @@ h1 h2{
 
 .introText{
     color: #f6f4e6;
-    font-size: 2em;
-    /*text-transform: uppercase;*/
+    font-size: 3em;
     text-align: center;
 }
 
@@ -180,14 +182,16 @@ h1 h2{
 
 
 .intro_part{
-    padding-left: 15%;
-    padding-right: 15%;
-    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
-    max-width: 100%; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .white_background {
-    background-color: #e5a859; /*#deb887; /*#fdd9ab;*/
+    /*bleu nuit : #0a0c25*/
+
+    background-color: #0a0c25; /*#e5a859; /*#deb887; /*#fdd9ab;*/
     width:100%;
     color: #3a47d5;
     padding-bottom: 20px;
@@ -226,8 +230,6 @@ h1 h2{
     background-color : #3a47d5;
     overflow: hidden;
     color: white;
-
-
 }
 .skill_item p{
     margin-top: 5px;
@@ -384,6 +386,7 @@ h1 h2{
     width: 95%;
     height: 100%;
     overflow: hidden;
+    z-index: -1;
 }
 
 .circles li{
