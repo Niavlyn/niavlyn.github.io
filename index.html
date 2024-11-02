@@ -1,67 +1,72 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-
-    <!-- CSS Styles -->
-    <link rel="stylesheet" href="css/styles.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
-
-    <title>Sylvain's Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/styles.css"/>
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+<title>Sylvain's Portfolio</title>
 </head>
 <body>
-<!-- Fond constant -->
-<div class="background">
-    <div class="area">
-        <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
 
+<div class="container">
+    <div class="burger-menu" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
+
+    <div class="gradient-text">PORTFOLIO</div>
+    <div class="author">SYLVAIN BUCHE</div>
+    <!-- Animated scroll arrow -->
+    <div class="scroll-arrow" onclick="scrollToSection('about')">&#8595;</div>
 </div>
 
-<div class="intro_part">
+<!-- Overlay Menu -->
+<div class="menu-overlay" id="menuOverlay">
+    <a href="#about" onclick="toggleMenu()">ABOUT ME</a>
+    <a href="#projects" onclick="toggleMenu()">XR RELATED EXPERIENCES PROJECTS</a>
+    <a href="#skills" onclick="toggleMenu()">SKILLS</a>
+    <a href="#experiences" onclick="toggleMenu()">PROFESSIONAL EXPERIENCES</a>
+    <a href="#education" onclick="toggleMenu()">EDUCATION</a>
+    <a href="#contact" onclick="toggleMenu()">CONTACT</a>
+</div>
 
-    <h1 class="introText">Welcome to my portfolio !</h1>
-    <h1 class="cat_title">About me</h1>
-    <div class="block">
-	    <p>Hi, I'm Sylvain ! I just graduated with a master's degree in computer science in France, and I specialize in XR development. I'm very curious about new immersive technologies in augmented, mixed and virtual reality.</p>
-        <p>My goal is to create innovative and interactive experiences that will make people's lives easier and more enjoyable. I am passionate about creating new things and I am always looking for new challenges to take on.</p>
+<!-- Sections -->
+<section id="about">
+    <h1>ABOUT ME</h1>
+    <div class="about_text">
+        <div class="text-content">
+            <p>Hi, I'm Sylvain ! I just graduated with a master's degree in computer science in France, and I specialize in XR development. I'm very curious about new immersive technologies in augmented, mixed and virtual reality.<br><br></p>
+            <p>My goal is to create innovative and interactive experiences that will make people's lives easier and more enjoyable. I am passionate about creating new things and I am always looking for new challenges to take on.</p>
+        </div>
+        <img id="profile_pic" src="images/profile_pic.png" alt="Profile_pic">
     </div>
+</section>
 
+<section id="projects">
+    <h1>XR RELATED EXPERIENCES & PROJECTS</h1>
 
-    <h1 class="cat_title">XR related experiences and projects</h1>
     <div class="title_with_image">
     
         <a href="https://www.flaticon.com/fr/icones-gratuites/metaverse" title="ar icon">
             <img src="images/realite-augmentee.png" class="left_image"/>
          </a>
         <h2 class="cat_title">ETSI Augmented Reality Framework</h2>
-
         <div class="controls">
-            <!-- Image to toggle section visibility -->
-            <label class="hover">
-              <figure id="toggle_figure_1"><img src="images/arrow_down.png" alt="Toggle Icon" id="toggle-image_1"></figure>
-            </label>
+            <button id="toggle_btn_1" class="toggle-btn" onclick="toggleContent_1()">+</button>
         </div>
 
     </div>
 
-
+    <div class="project-summary">
+        <p>Implementation of an augmented reality standard using Unity and ARFoundation for Android and iOS.</p>
+        <img src="images/arf_miniature.png" class="miniature" />
+    </div>
 
     <div id="hidden-section_1" class="hidden-section">
     
-        <div class="company" style="margin-left:40px">
+        <div class="company">
             <a title="orange icon">
                 <img src="images/Orange_logo.svg" class="right_image rounded_image" />
             </a>   
@@ -117,11 +122,13 @@
         <h2 class="cat_title">Supercopter</h2>
 
         <div class="controls">
-            <!-- Image to toggle section visibility -->
-            <label class="hover">
-              <figure id="toggle_figure_2"><img src="images/arrow_down.png" alt="Toggle Icon" id="toggle-image_2"></figure>
-            </label>
+            <button id="toggle_btn_2" class="toggle-btn" onclick="toggleContent_2()">+</button>
         </div>
+    </div>
+
+    <div class="project-summary">
+        <p>VR game that uses motion sensors to control an aircraft.</p>
+        <img src="images/supercopter_miniature.png" class="miniature" />
     </div>
 
     <div id="hidden-section_2" class="hidden-section">
@@ -143,12 +150,15 @@
         <h2 class="cat_title">AVATAR</h2>
 
         <div class="controls">
-            <!-- Image to toggle section visibility -->
-            <label class="hover">
-              <figure id="toggle_figure_3"><img src="images/arrow_down.png" alt="Toggle Icon" id="toggle-image_3"></figure>
-            </label>
+            <button id="toggle_btn_3" class="toggle-btn" onclick="toggleContent_3()">+</button>
         </div>
     </div>
+
+    <div class="project-summary">
+        <p>Experiment on the human interactions with virtual  avatars with realistic expressions in VR.</p>
+        <img src="images/avatar_miniature.png" class="miniature" />
+    </div>
+
     <div id="hidden-section_3" class="hidden-section">
         <div class="left_block">
             <p>
@@ -161,8 +171,10 @@
 
 </div>
 
-<div class="white_background">
-    <h1 class="cat_title">Skills</h1>
+</section>
+
+<section id="skills">
+    <h1>SKILLS</h1>
     <h2 class="cat_skills">Developpement skills</h2>
     <div class="skills-grid">
         <div class="skill-item">
@@ -257,142 +269,126 @@
             <p>Unix</p>
         </div>
     </div>
-</div>
+</section>
 
-<div class="education">
-    <h1 class="cat_title">Professional experiences and education</h1>
-    <h2>Professional experiences</h2>
-
+<section id="experiences">
+    <h1>PROFESSIONAL EXPERIENCES</h1>
     <div class="centered-container">
         <div class="top-div">
-            <a title="orange icon">
-                <img src="images/Orange_logo.svg" class="right_image rounded_image" />
-            </a> 
-            <p>
-            Augmented reality developer internship at Orange Innovation<br>
-            February 2024 - August 2024<br>
-            Skills : Unity, C#, ARFoundation, ARCore, ARKit
-            </p>
+            <div class="experiences-block">
+				<img src="images/Orange_logo.svg" class="right_image rounded_image" />
+				<p><strong>
+				Augmented reality developer internship at Orange Innovation</strong><br>
+				February 2024 - August 2024
+				</p>
+            </div>
         </div>
+        <p><em>Skills : Unity, C#, ARFoundation, ARCore, ARKit</em></p>
         <div class="vertical-line"></div>
         <div class="bottom-div">
-            <a title="irisa icon">
-                <img src="images/irisa.png" class="rounded_image" style="max-height : 48px"/>
-            </a> 
-            <p>Unity developer internship at IRISA and LARIS research laboratories (remote)<br>
-            July 2023 - August 2023<br>
-            Skills : Unity, C#, Qualisys QTM, Motion Builder
-            </p>
+            <div class="experiences-block">
+                <img id="irisa" src="images/irisa.png" class="rounded_image"/>
+                <p><strong>Unity developer internship at IRISA and LARIS research laboratories (remote)</strong><br>
+                July 2023 - August 2023
+                </p>
+            </div>
         </div>
+        <p><em>Skills : Unity, C#, Qualisys QTM, Motion Builder</em></p>
         <div class="vertical-line"></div>
         <div class="bottom-div">
-            <a title="mydemenageur icon">
+            <div class="experiences-block">
                 <img src="images/mydemenageur.png" class="right_image rounded_image" />
-            </a> 
-            <p>Web and mobile developer internship at  MyDemenageur - Solid'R (remote)<br>
-            April 2021 - June 2021<br>
-            Skills : Flutter, JavaScript, PHP, HTML, CSS
-            </p>
+                <p><strong>Web and mobile developer internship at  MyDemenageur - Solid'R (remote)</strong><br>
+                April 2021 - June 2021
+                </p>
+            </div>
         </div>
+        <p><em>Skills : Flutter, JavaScript, PHP, HTML, CSS</em></p>
     </div>
+</section>
 
-    <h2>Education</h2>
 
+<section id="education">
+    <h1>EDUCATION</h1>
     <div class="centered-container">
         <div class="top-div">
-            <a title="SSI_UBS">
+            <div class="education-block">
                 <img src="images/SSI_UBS.png" class="right_image rounded_image" />
-            </a> 
-            <p>
-            Master of Computer Science, specializing in Interactive Applications and Digital Data<br>
-            University of South Brittany<br>
-            2022 - 2024
-            </p>
+                <p>
+                Master of Computer Science, specializing in Interactive Applications and Digital Data<br>
+                University of South Brittany<br>
+                2022 - 2024
+                </p>
+                </div>
         </div>
-        <div class="vertical-line"></div>
+        <div class="education-vertical-lines"></div>
         <div class="bottom-div">
-            <a title="SSI_UBS">
+            <div class="education-block">
                 <img src="images/SSI_UBS.png" class="right_image rounded_image" />
-            </a> 
-            <p>Bachelor of Computer Science - University of South Brittany<br>
-            2021 - 2022
-            </p>
+                <p>Bachelor of Computer Science - University of South Brittany<br>
+                2021 - 2022
+                </p>
+            </div> 
+            
         </div>
-        <div class="vertical-line"></div>
+        <div class="education-vertical-lines"></div>
         <div class="bottom-div">
-            <a title="iut vannes">
+            <div class="education-block">
                 <img src="images/IUT_VANNES.jpg" class="right_image rounded_image" />
-            </a> 
-            <p>Associate Degree in Computer Science - University Institute of Technology of Vannes<br>
-            2019 - 2021
-            </p>
+                <p>Associate Degree in Computer Science - University Institute of Technology of Vannes<br>
+                2019 - 2021
+                </p>
+            </div> 
+            
         </div>
     </div>
-</div>
+</section>
 
-<div class="white_background">
-    <h1 class="cat_title">Contact</h1>
-    <div class="contact">
-        <a href="https://www.linkedin.com/in/sylvain-buche/" title="linkedin">
-            <img src="images/linkedin.png" alt="linkedin link">
-        </a>
-        <p> buche.sylvain[at]gmail.com<br><br>
-        
-        📍Brittany, France</p>
-    </div>
-</div>
+<section id="contact">
+    <h1>CONTACT</h1>
+    <a href="https://www.linkedin.com/in/sylvain-buche/" title="linkedin">
+        <img src="images/linkedin.png" alt="linkedin link">
+    </a>
+    <p> buche.sylvain[at]gmail.com<br><br>📍Brittany, France</p>
+</section>
 
 
-<!-- Conteneur pour charger le contenu dynamiquement -->
-<div id="content"></div>
-
-<!-- Script JavaScript -->
-
+<!-- Scripts -->
 <script>
-    // JavaScript to toggle visibility
-    document.getElementById('toggle-image_1').addEventListener('click', function() {
-      var hiddenSection = document.getElementById('hidden-section_1');
-      hiddenSection.classList.toggle('visible'); // Toggle 'visible' class
-    });
-  </script>
-
-  <script>
-    // JavaScript to toggle visibility
-    document.getElementById('toggle-image_2').addEventListener('click', function() {
-      var hiddenSection = document.getElementById('hidden-section_2');
-      hiddenSection.classList.toggle('visible'); // Toggle 'visible' class
-    });
-  </script>
-
-  <script>
-    // JavaScript to toggle visibility
-    document.getElementById('toggle-image_3').addEventListener('click', function() {
-      var hiddenSection = document.getElementById('hidden-section_3');
-      hiddenSection.classList.toggle('visible'); // Toggle 'visible' class
-    });
-  </script>
-
-
-<script>
-    // Fonction pour charger le contenu de la page
-    function loadPage(page) {
-        fetch(`pages/${page}.html`)
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('content').innerHTML = data;
-            })
-            .catch(error => console.error(error));
+    function toggleContent_1() {
+        const btn = document.querySelector("#toggle_btn_1");
+        const content = document.querySelector("#hidden-section_1");
+    
+        btn.classList.toggle('open');
+        content.classList.toggle('visible');
     }
 
-    // Écouteurs d'événements pour les liens de navigation
-    document.querySelectorAll('.navMenu a').forEach(link => {
-        link.addEventListener('click', event => {
-            event.preventDefault();
-            const page = link.getAttribute('href').substring(1); // Supprime le # du href
-            loadPage(page);
-        });
-    });
+    function toggleContent_2() {
+        const btn = document.querySelector("#toggle_btn_2");
+        const content = document.querySelector("#hidden-section_2");
+    
+        btn.classList.toggle('open');
+        content.classList.toggle('visible');
+    }
 
+    function toggleContent_3() {
+        const btn = document.querySelector("#toggle_btn_3");
+        const content = document.querySelector("#hidden-section_3");
+    
+        btn.classList.toggle('open');
+        content.classList.toggle('visible');
+    }
+
+    // Function to toggle the menu overlay
+    function toggleMenu() {
+        const menuOverlay = document.getElementById("menuOverlay");
+        menuOverlay.classList.toggle("active");
+    }
+
+    // Smooth scroll function for sections
+    function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+    }
 </script>
 </body>
 </html>
