@@ -560,3 +560,99 @@ iframe{
 .content.open {
     max-height: 200px;
 }
+
+
+
+/** RESPONSIVE **/
+
+/* Responsive adjustments for screens below 768px */
+@media (max-width: 768px) {
+
+    /* Container padding */
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /* Adjust gradient text and author font sizes */
+    .gradient-text {
+        font-size: 2rem;
+    }
+    .author {
+        font-size: 1rem;
+    }
+
+    /* Burger menu - Fullscreen on open */
+    .menu-overlay a {
+        font-size: 1.5rem;
+    }
+
+ /* About Section - Center content and adjust width */
+    .about_text {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .about_text img {
+        max-width: 70%; /* Scale down profile picture */
+        margin: 10px 0; /* Add vertical spacing */
+    }
+
+    .text-content {
+        width: 90%; /* Adjust text width to fit within mobile view */
+    }
+
+    /* Projects Section */
+    .project-summary,
+    .title_with_image {
+        flex-direction: column;
+        max-width: 90%;
+        text-align: center;
+    }
+    .project-summary img,
+    .left_image,
+    .right_image {
+        max-width: 70%;
+    }
+    .hidden-section .etsi_gifs {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    /* Skills Grid - Stack skills in two columns */
+    .skills-grid {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .skill-item {
+        width: 45%;
+    }
+
+    /* Experiences and Education Sections */
+    .experiences-block,
+    .education-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .top-div, .bottom-div {
+        max-width: 100%;
+    }
+
+    /* Contact Section - Center icons */
+    #contact img {
+        max-width: 40px;
+    }
+
+    /* Additional general adjustments */
+    section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .horizontal-line {
+        width: 90%;
+    }
+}
