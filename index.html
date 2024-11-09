@@ -101,15 +101,14 @@
             </div>
         </div>
 
-        <div class="block gifs_div" >
+        <div class="block">
 	        <p>Using a combination of real life "trackable" objects and fixed space positions known as anchors, we are able to deliver an extremely similar experience to the user regardless of the device used. <br>
             Here are some excerpts from the validation application tests. On the left, the Android version, and on the right, the iOS one.</p>
              </p>
-            <div class="etsi_gifs">
-                <img src="images/ValidationAppAndroid.gif" alt="android ETSI gif"/>
-                <img src="images/ValidationAppiOS.gif" alt="iOS ETSI gif"/>
-    
-            </div>
+        </div>
+        <div class="etsi_gifs">
+            <img src="images/ValidationAppAndroid.gif" alt="android ETSI gif"/>
+            <img src="images/ValidationAppiOS.gif" alt="iOS ETSI gif"/>
         </div>
     </div>
 
@@ -127,18 +126,25 @@
     </div>
 
     <div class="project-summary">
-        <p>VR game that uses motion sensors to control an aircraft.</p>
+        <p>VR game that uses MYO armbands to control an aircraft.</p>
         <img src="images/supercopter_miniature.png" class="miniature" />
     </div>
 
     <div id="hidden-section_2" class="hidden-section">
-        <div class="left_block">
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac odio egestas, volutpat orci at, porttitor ipsum. Mauris feugiat luctus lectus vel congue. Suspendisse et sagittis nunc, at faucibus nisl. Cras facilisis felis mattis risus fermentum hendrerit. Vestibulum congue nisi ac felis tristique, eu pulvinar nulla sodales. Aliquam eget nisi nec libero gravida dictum. Nulla ullamcorper, nisi non auctor sollicitudin, quam justo rutrum neque, non scelerisque mauris lorem id mauris. Aliquam facilisis id dolor at maximus. Aliquam a consequat magna, sit amet mattis arcu. Nam sagittis arcu nisl, ut lacinia sem feugiat sit amet. Phasellus nunc nisi, lobortis ac sagittis at, posuere nec turpis. Aenean quis massa vitae lacus dapibus pharetra quis sed lectus. Aenean dolor neque, commodo eu est a, dictum efficitur nibh. Nulla consequat diam ante, vitae facilisis elit interdum eu.
-
-            Nunc ultrices ipsum ut imperdiet luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam congue vitae felis dignissim pretium. Etiam ante sem, vulputate non elit vel, tempus mollis erat. In lacinia nisi quis leo lacinia convallis. In hac habitasse platea dictumst. Aliquam laoreet semper varius. Ut consectetur mattis venenatis. In lacinia sodales eleifend. Ut pellentesque augue dui, posuere consequat sapien aliquet nec. Nam tincidunt nibh quis magna ornare rutrum. Aliquam tempus quam non tellus pretium venenatis. Quisque blandit, ipsum at pellentesque faucibus, nisl sapien condimentum dolor, nec porttitor lacus sem euismod leo. Sed eget elit tristique, sagittis erat vel, bibendum odio.
-            </p>
+        <h2>Context</h2>
+        <div class="block">
+            <p>Supercopter is a university team project I worked on with other students during my master’s degree as an end-of-year project. The goal was to apply our class learnings in a single, collaborative project. We decided to create a VR game for Oculus Quest 1 and 2 headsets.
+            <br>In this game, the player controls a "supercopter" and is tasked with taking down a giant eagle flying between skyscrapers. The eagle regularly drops feathers in the air. Players can gain points by collecting feathers or by hitting the eagle with the supercopter, which makes the eagle reappear in another location on the map. The eagle's flight path was created using reinforcement learning. There are two ways to control the supercopter: the classic way, using a keyboard, or the fun wayusing a MYO armband that detects forearm movements to move the supercopter. (The armbands are not very reliable, so playing with the keyboard is much easier.)</p>
+            <div class="myo">
+                <img src="images/myo.jpg"/>
+                <p>We used the MYO armband to control the supercopter, but it was difficult to use consistently, so we kept the keyboard option, which was originally intended only for debugging.</p>
+            </div>
+        </div>    
+        <h2>My work</h2>
+        <div class="block">
+            <p>For this project, I worked on map creation, feather behavior, eagle animations, the UI, and VR integration. You can find the demo video with keyboard controls just below: </p>
         </div>
+        <iframe src="https://www.youtube.com/embed/ChMc3zSbfTI" width="560" height="315"  frameborder="0" allowfullscreen></iframe>
     </div>
 
     <div class="horizontal-line"></div>
@@ -160,12 +166,30 @@
     </div>
 
     <div id="hidden-section_3" class="hidden-section">
-        <div class="left_block">
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac odio egestas, volutpat orci at, porttitor ipsum. Mauris feugiat luctus lectus vel congue. Suspendisse et sagittis nunc, at faucibus nisl. Cras facilisis felis mattis risus fermentum hendrerit. Vestibulum congue nisi ac felis tristique, eu pulvinar nulla sodales. Aliquam eget nisi nec libero gravida dictum. Nulla ullamcorper, nisi non auctor sollicitudin, quam justo rutrum neque, non scelerisque mauris lorem id mauris. Aliquam facilisis id dolor at maximus. Aliquam a consequat magna, sit amet mattis arcu. Nam sagittis arcu nisl, ut lacinia sem feugiat sit amet. Phasellus nunc nisi, lobortis ac sagittis at, posuere nec turpis. Aenean quis massa vitae lacus dapibus pharetra quis sed lectus. Aenean dolor neque, commodo eu est a, dictum efficitur nibh. Nulla consequat diam ante, vitae facilisis elit interdum eu.
-
-            Nunc ultrices ipsum ut imperdiet luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam congue vitae felis dignissim pretium. Etiam ante sem, vulputate non elit vel, tempus mollis erat. In lacinia nisi quis leo lacinia convallis. In hac habitasse platea dictumst. Aliquam laoreet semper varius. Ut consectetur mattis venenatis. In lacinia sodales eleifend. Ut pellentesque augue dui, posuere consequat sapien aliquet nec. Nam tincidunt nibh quis magna ornare rutrum. Aliquam tempus quam non tellus pretium venenatis. Quisque blandit, ipsum at pellentesque faucibus, nisl sapien condimentum dolor, nec porttitor lacus sem euismod leo. Sed eget elit tristique, sagittis erat vel, bibendum odio.
-            </p>
+        <h2>Context</h2>
+        <div class="block">
+            <p>AVATAR was a team project I started during the first year of my master’s degree and later continued as an internship for the IRISA and LARIS university laboratories. The aim of the project was to implement realistic facial behavior in virtual avatars, covering both movement and facial expressions. The entire project was designed to support a PhD student’s thesis on the use of realistic virtual avatars in the context of virtual reality learning.
+            <br>We used the university’s motion capture room to record around 20 different 3D poses for our avatars, capturing both body and facial data with a set of markers on the actor. We also used special glasses to record eye movements. We then spent significant time cleaning the motion capture (MOCAP) data before merging it with the eye-tracking data to achieve a fully accurate and realistic human behavior model.</p>
+            <div class="myo">
+                <img src="images/marker_set.png"/>
+                <p>This is the marker set (the disposition of markers on the actor's body) we used for our MOCAP sessions. We also added markers on the actor's face.</p>
+            </div>
+            <div class="myo">
+                <img src="images/pupil_labs.jpeg"/>
+                <p>This is the eye-tracking device we used to record the actor’s eye movements. It caused some issues because its plastic parts obstructed the facial markers, making them difficult for the MOCAP cameras to detect and degrading the quality of our facial MOCAP data.</p>
+            </div>
+        </div>    
+        <h2>My work</h2>
+        <div class="block">
+            <p>During the team project phase, I worked on processing the MOCAP data for the body, cleaning it and importing it onto our avatar in the Unity game engine. I also implemented the map and VR functionalities. In the second phase, I worked for one month as an intern to complete the project. I replaced the avatar with one that had blendshapes already integrated for the face (blendshapes are predefined variations of a 3D model’s mesh that enable smooth transitions between different facial expressions, shapes, or poses by interpolating vertex positions). I also used new facial MOCAP data, as the data we initially recorded was too low-quality for realistic expressions. <br>You can find demo videos of the project just below: </p>
+        </div>
+        <iframe src="https://www.youtube.com/embed/9MTnSVOlM2c" width="560" height="315"  frameborder="0" allowfullscreen></iframe>
+        <div class="myo">
+            <p>Video 1 : State of the project at the end of the first phase, with body animations and VR implemented.</p>
+        </div>
+        <iframe src="https://www.youtube.com/embed/NTLUwPJfcTM" width="560" height="315"  frameborder="0" allowfullscreen></iframe>
+        <div class="myo">
+            <p>Video 2 : Avatar change and facial animations rework.</p>
         </div>
     </div>
 
@@ -346,10 +370,14 @@
 
 <section id="contact">
     <h1>CONTACT</h1>
-    <a href="https://www.linkedin.com/in/sylvain-buche/" title="linkedin">
-        <img src="images/linkedin.png" alt="linkedin link">
+    
+    <a href="https://github.com/Niavlyn" title="GitHub">
+        <img src="images/github.png" class="contact_links" alt="github link">
     </a>
-    <p> buche.sylvain[at]gmail.com<br><br>📍Brittany, France</p>
+    <a href="https://www.linkedin.com/in/sylvain-buche/" title="LinkedIn">
+        <img src="images/linkedin.png" alt="linkedin link" class="contact_links">
+    </a>
+    <p>buche.sylvain[at]gmail.com<br><br>📍Brittany, France</p>
 </section>
 
 
