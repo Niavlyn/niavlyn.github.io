@@ -618,10 +618,17 @@ iframe{
         max-width: 70%;
         margin-top:5px;
     }
-    .hidden-section .etsi_gifs {
+    .hidden-section{
         flex-direction: column;
-        max-width: 90%;
+        max-width: 100%;
     }
+    .etsi_gifs{
+        max-width: 100%;
+	 }
+
+     .etsi_gifs_responsive{
+         margin-top: 20px;
+     }
 
     /* Skills Grid - Stack skills in two columns */
     .skills-grid {
